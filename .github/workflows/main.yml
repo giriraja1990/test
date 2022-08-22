@@ -37,4 +37,4 @@ jobs:
           
       - name: Trigger workflow in another repo
         run: |
-          curl -X POST -H "Authorization: token ${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/giriraja1990/test1/actions/workflows/functional_test.yml/dispatches  -d '{"event_type": "build_application"}'
+          curl -X POST -H "Authorization: token ${{secrets.PAT_TOKEN}}" -H "Accept: application/vnd.github.v3+json" https://api.github.com/repos/giriraja1990/test1/dispatches  -d '{"event_type": "build_application"}'
